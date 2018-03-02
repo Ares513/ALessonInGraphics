@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.testButton = new System.Windows.Forms.Button();
+            this.drawPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // testButton
@@ -41,11 +42,20 @@
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
+            // drawPanel
+            // 
+            this.drawPanel.Location = new System.Drawing.Point(186, 88);
+            this.drawPanel.Name = "drawPanel";
+            this.drawPanel.Size = new System.Drawing.Size(529, 335);
+            this.drawPanel.TabIndex = 1;
+            this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 586);
+            this.Controls.Add(this.drawPanel);
             this.Controls.Add(this.testButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
@@ -57,6 +67,7 @@
         #endregion
 
         private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Panel drawPanel;
     }
 }
 

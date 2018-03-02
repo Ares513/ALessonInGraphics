@@ -21,5 +21,11 @@ namespace ALessonInGraphics
         {
             testButton.Text = "I was clicked!";
         }
+
+        private void drawPanel_Paint(object sender, PaintEventArgs e)
+        {
+            var g = e.Graphics;
+            g.DrawRectangle(Pens.Black, new Rectangle(10, 10, 10, 10));
+        }
     }
 }
