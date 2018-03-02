@@ -16,5 +16,10 @@ namespace ALessonInGraphics
         {
             InitializeComponent();
         }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            testButton.Text = "I was clicked!";
+        }
     }
 }
