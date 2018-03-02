@@ -27,7 +27,10 @@ namespace ALessonInGraphics
             var g = e.Graphics;
             var myPen = new Pen(Color.FromArgb(100, 182, 76, 126));
 
-            g.DrawRectangle(myPen, new Rectangle(10, 10, 10, 10));
+            g.DrawRectangle(Pens.Black, new Rectangle(0, 0, 50, 50));
+            //we can make as any calls as we want here- they will be drawn in order
+            g.DrawRectangle(myPen, new Rectangle(10, 10, 50, 50));
+            
         }
     }
 }
