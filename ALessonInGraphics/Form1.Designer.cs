@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.testButton = new System.Windows.Forms.Button();
-            this.drawPanel = new System.Windows.Forms.Panel();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.drawPanel = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.drawPanel)).BeginInit();
             this.SuspendLayout();
             // 
             // testButton
@@ -42,12 +45,18 @@
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
+            // gameTimer
+            // 
+            this.gameTimer.Interval = 20;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            // 
             // drawPanel
             // 
-            this.drawPanel.Location = new System.Drawing.Point(186, 88);
+            this.drawPanel.Location = new System.Drawing.Point(314, 142);
             this.drawPanel.Name = "drawPanel";
-            this.drawPanel.Size = new System.Drawing.Size(529, 335);
+            this.drawPanel.Size = new System.Drawing.Size(339, 203);
             this.drawPanel.TabIndex = 1;
+            this.drawPanel.TabStop = false;
             this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
             // 
             // Form1
@@ -61,6 +70,7 @@
             this.Name = "Form1";
             this.Text = "A Lesson In Graphics";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.drawPanel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,7 +78,8 @@
         #endregion
 
         private System.Windows.Forms.Button testButton;
-        private System.Windows.Forms.Panel drawPanel;
+        private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.PictureBox drawPanel;
     }
 }
 

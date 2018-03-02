@@ -17,6 +17,21 @@ namespace ALessonInGraphics
         public Form1()
         {
             InitializeComponent();
+            //set these to reduce flicker
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            SetStyle(ControlStyles.UserPaint, true);
+        }
+        //init
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //actual init logic; don't put stuff in the constructor, as UI elements haven't loaded
+            entities = new List<Entity>();
+            //add a test entity 
+            entities.Add(new Entity(new Point(0, 0), new Point(5, 5)));
+            
+            //game is ready!
+            gameTimer.Enabled = true;
         }
 
         private void testButton_Click(object sender, EventArgs e)
@@ -33,13 +48,21 @@ namespace ALessonInGraphics
             //we can make as any calls as we want here- they will be drawn in order
             g.DrawRectangle(myPen, new Rectangle(10, 10, 50, 50));
             
+            foreach(var ent in entities)
+            {
+                g.DrawRectangle(Pens.Black, new Rectangle(ent.Position.X, ent.Position.Y, 10, 10));
+            }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+
+        private void gameTimer_Tick(object sender, EventArgs e)
         {
-            //actual init logic; don't put stuff in the constructor, as UI elements haven't loaded
-            entities = new List<Entity>();
-            //add a test entity 
+            drawPanel.Invalidate(); //technically a refresh is an invalidate
+            foreach(var ent in entities)
+            {
+                ent.Update();
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace ALessonInGraphics
 
         public void Update()
         {
-            Position = new Point(Position.X + Velocity.X, Position.Y + Position.Y);
+            Position = new Point(Position.X + Velocity.X, Position.Y + Velocity.Y);
         }
     }
 }
