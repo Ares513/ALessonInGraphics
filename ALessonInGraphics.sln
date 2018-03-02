@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALessonInGraphics", "ALessonInGraphics\ALessonInGraphics.csproj", "{18E6F1F3-E764-4829-AD68-433F76DA430D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18E6F1F3-E764-4829-AD68-433F76DA430D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E6F1F3-E764-4829-AD68-433F76DA430D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E6F1F3-E764-4829-AD68-433F76DA430D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E6F1F3-E764-4829-AD68-433F76DA430D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F11E07F-14A1-4434-8040-EE448905C4A5}
+	EndGlobalSection
+EndGlobal
