@@ -28,7 +28,7 @@ namespace ALessonInGraphics
             //actual init logic; don't put stuff in the constructor, as UI elements haven't loaded
             entities = new List<Entity>();
             //add a test entity 
-            entities.Add(new Entity(new Point(0, 0), new Point(5, 5)));
+            entities.Add(new Entity(new Point(0, 0), new Point(1, 1)));
             
             //game is ready!
             gameTimer.Enabled = true;
@@ -50,7 +50,9 @@ namespace ALessonInGraphics
             
             foreach(var ent in entities)
             {
+                //our draw function; other things could implement this differently: recommend classes inherit from enttiy and impl their own draw
                 g.DrawRectangle(Pens.Black, new Rectangle(ent.Position.X, ent.Position.Y, 10, 10));
+                g.DrawImage(Properties.Resources.alphatest, new Rectangle(ent.Position.X, ent.Position.Y, 100, 100));
             }
         }
 
