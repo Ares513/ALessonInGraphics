@@ -25,7 +25,9 @@ namespace ALessonInGraphics
         private void drawPanel_Paint(object sender, PaintEventArgs e)
         {
             var g = e.Graphics;
-            g.DrawRectangle(Pens.Black, new Rectangle(10, 10, 10, 10));
+            var myPen = new Pen(Color.FromArgb(100, 182, 76, 126));
+
+            g.DrawRectangle(myPen, new Rectangle(10, 10, 10, 10));
         }
     }
 }
