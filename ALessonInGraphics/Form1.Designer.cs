@@ -60,6 +60,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
             this.Text = "A Lesson In Graphics";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

@@ -12,6 +12,8 @@ namespace ALessonInGraphics
 {
     public partial class Form1 : Form
     {
+        //for now, we can refactor this later into some kind of manager
+        List<Entity> entities;
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +33,13 @@ namespace ALessonInGraphics
             //we can make as any calls as we want here- they will be drawn in order
             g.DrawRectangle(myPen, new Rectangle(10, 10, 50, 50));
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //actual init logic; don't put stuff in the constructor, as UI elements haven't loaded
+            entities = new List<Entity>();
+            //add a test entity 
         }
     }
 }
